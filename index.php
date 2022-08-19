@@ -1,7 +1,6 @@
 <?php
 $page=$_GET['q'];
 // var_dump($page);
-// $page= $page+1 ;
 if ($page == 2) {
   header('location: http://sourav_domain.com/login_user.php');
 }

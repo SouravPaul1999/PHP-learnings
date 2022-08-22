@@ -8,11 +8,7 @@
 </head>
 
 <body>
-  <!-- <h1>Hello World!</h1>
-
-    <p>This is the landing page of <strong>sourav_domain</strong>.this is my first php in my domain </p>
-    hiiiii -->
-
+  
   <?php
   $page = $_GET['q'];
   // var_dump($page);
@@ -38,8 +34,11 @@
     // header('location: http://sourav_domain.com/pdf_Marksheet.php');
     include('./pdf_Marksheet.php');
   }
+  else{
+    echo "<h1>Hello World!</h1><p>This is the landing page of <strong>sourav_domain</strong>.this is my first php in my domain </p>";
+  }
   ?>
-
+  
 </body>
 
 </html>

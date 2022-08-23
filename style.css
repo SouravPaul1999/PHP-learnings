@@ -5,6 +5,7 @@ body {
   font-family: "ss-light";
   margin:0;
   padding: 0;
+  box-sizing: border-box;
 }
 .service-title{
   color: #ff7900;

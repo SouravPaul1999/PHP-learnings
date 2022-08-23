@@ -1,0 +1,61 @@
+body {
+  font-size: .9375rem;
+  color: #4b5561;
+  overflow-x: hidden;
+  font-family: "ss-light";
+  margin:0;
+  padding: 0;
+}
+.service-title{
+  color: #ff7900;
+}
+.service-title, .service-secondary-title{
+font-size: 2.3rem;
+line-height: 1.2;
+text-transform: uppercase;
+font-family: "ss-bold";
+padding-right: 1rem;
+}
+
+@media only screen and (max-width: 320px) {
+  .service-title,.service-secondary-title{ 
+  font-size: 1.8rem; 
+}}
+@media only screen and (max-width: 280px) {
+  .service-title,.service-secondary-title{ 
+  font-size: 1.5rem; 
+}}
+
+ul{
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style-type: none;
+  color: #4b5561;
+  text-decoration: none;
+  padding-top: 1rem;
+  padding-right: 2rem;
+}
+ul li a {
+  color: #4b5561;
+  text-decoration: none;
+}
+ul li{
+  padding-top: .5rem;
+}
+
+li::before {
+content: "oo";
+width: 10px;
+height: 10px;
+border: 2px solid #ff7900;
+border-radius: 50%;
+color: transparent;
+margin-right: 10px;
+}
+
+ul li a:hover{
+  color: #4b5561;
+}
+.border-color{
+  border-color: #ff7900;
+}

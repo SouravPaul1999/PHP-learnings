@@ -4,20 +4,24 @@ body {
   overflow-x: hidden;
   font-family: "ss-light";
   margin:0;
-  padding: 0;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   box-sizing: border-box;
 }
 .service-title{
   color: #ff7900;
 }
 .service-title, .service-secondary-title{
-font-size: 2.3rem;
-line-height: 1.2;
+font-size: 3rem;
+line-height: 4rem;
 text-transform: uppercase;
 font-family: "ss-bold";
-padding-right: 1rem;
 }
-
+@media only screen and (max-width: 991px) {
+  .service-title,.service-secondary-title{ 
+  font-size: 2.4rem; 
+  line-height: 3rem;
+}}
 @media only screen and (max-width: 320px) {
   .service-title,.service-secondary-title{ 
   font-size: 1.8rem; 

@@ -42,16 +42,16 @@ require('vendor/autoload.php');
     // echo $scontent;
 
     if ($i % 2 == 0) {
-      echo "<div class='container-fluid'>";
+      echo "<div class='container'>";
       echo "<div class='row flex-row-reverse flex-row gy-5 justify-content-center'>";
       
-      echo "<div class=' col-sm-12 col-md-6  col-xl-4'>";
+      echo "<div class=' col-sm-12 col-md-6  col-xl-6'>";
       
       echo "<img class='image img-fluid' alt='service image' src='$image'>";
       
       echo "</div>";
       
-      echo "<div class=' col-sm-12 col-md-6  col-xl-4'>";
+      echo "<div class=' col-sm-12 col-md-6  col-xl-6'>";
       
       echo "<div class='text-break'>$stitle</div>";
       
@@ -67,17 +67,17 @@ require('vendor/autoload.php');
       echo "</div>";
     } 
     else {
-      echo "<div class='container-fluid'>";
+      echo "<div class='container'>";
 
       echo "<div class='row flex-row gy-5 justify-content-center'>";
 
-      echo "<div class=' col-sm-12 col-md-6 col-xl-4'>";
+      echo "<div class=' col-sm-12 col-md-6 col-xl-6'>";
 
       echo "<img class='image img-fluid' alt='service image' src='$image'>";
 
       echo "</div>";
 
-      echo "<div class=' col-sm-12 col-md-6 col-xl-4'>";
+      echo "<div class=' col-sm-12 col-md-6 col-xl-6'>";
 
       echo "<div class=' text-break'>$stitle</div>";
 

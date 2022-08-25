@@ -105,7 +105,7 @@ require('./vendor/autoload.php')
             $mail->Port = 587;
 
             // optional smtp settings, if found som smtp error
-            
+
             // $mail->SMTPOptions = array(
             //   'ssl' => array(
             //     'verify_peer' => false,
@@ -114,10 +114,10 @@ require('./vendor/autoload.php')
             //   )
             // );
 
-            $mail->setFrom('souravpaul505@gmail.com', 'sourav');
+            $mail->setFrom('souravpaul505@gmail.com', 'Form_submission');
 
             /* Add a recipient. */
-            $mail->addAddress($email, 'sourav_official_email');
+            $mail->addAddress($email, 'subscriber');
 
             /* Set the subject. */
             $mail->Subject = 'Thank you';

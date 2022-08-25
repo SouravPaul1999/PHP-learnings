@@ -42,56 +42,58 @@ require('vendor/autoload.php');
     // echo $scontent;
 
     if ($i % 2 == 0) {
-      echo "<div class='container'>";
-      echo "<div class='row flex-row-reverse flex-row gy-5 justify-content-center'>";
+      ?>
+       <div class='container'>
+       <div class='row flex-row-reverse flex-row gy-5 justify-content-center'>
       
-      echo "<div class=' col-sm-12 col-md-6  col-xl-6'>";
+       <div class=' col-sm-12 col-md-6  col-xl-6'>
       
-      echo "<img class='image img-fluid' alt='service image' src='$image'>";
+       <img class='image img-fluid' alt='service image' src=<?php echo $image ?>>
       
-      echo "</div>";
+       </div>
       
-      echo "<div class=' col-sm-12 col-md-6  col-xl-6'>";
+       <div class=' col-sm-12 col-md-6  col-xl-6'>
       
-      echo "<div class='text-break'>$stitle</div>";
+       <div class='text-break'><?php echo $stitle ?></div>
       
       
-      echo "<div class='text-break'>$scontent</div>";
+       <div class='text-break'> <?php echo $scontent ?></div>
+  
+       <div class='text-lest'><a href='#' class='text-dark text-decoration-none'><button class=' fw-bold btn btn-md btn-white btn-block border border-primary border-color border-2 text-uppercase'  type='submit'>explore more</button></a></div>
       
-      echo "<div class='text-lest'><a href='#' class='text-dark text-decoration-none'><button class=' fw-bold btn btn-md btn-white btn-block border border-primary border-color border-2 text-uppercase'  type='submit'>explore more</button></a></div>";
+       </div>
       
-      echo "</div>";
-      
-      echo "</div>";
+       </div>
 
-      echo "</div>";
+       </div>
+      <?php
     } 
     else {
-      echo "<div class='container'>";
+      ?>
+       <div class='container'>
 
-      echo "<div class='row flex-row gy-5 justify-content-center'>";
+       <div class='row flex-row gy-5 justify-content-center'>
 
-      echo "<div class=' col-sm-12 col-md-6 col-xl-6'>";
+       <div class=' col-sm-12 col-md-6 col-xl-6'>
 
-      echo "<img class='image img-fluid' alt='service image' src='$image'>";
+       <img class='image img-fluid' alt='service image' src=<?php echo $image ?>>
 
-      echo "</div>";
+       </div>
 
-      echo "<div class=' col-sm-12 col-md-6 col-xl-6'>";
+       <div class=' col-sm-12 col-md-6 col-xl-6'>
 
-      echo "<div class=' text-break'>$stitle</div>";
+       <div class=' text-break'><?php echo $stitle ?></div>
 
-      echo "<div class='text-break'>$scontent</div>";
+       <div class='text-break'> <?php echo $scontent ?></div>
 
-      echo "<div class='text-left'><a href='#' class='text-dark text-decoration-none'><button class=' fw-bold btn btn-md btn-white btn-block border border-primary border-color border-2 text-uppercase' type='submit'>explore more</button></a></div>";
+       <div class='text-left'><a href='#' class='text-dark text-decoration-none'><button class=' fw-bold btn btn-md btn-white btn-block border border-primary border-color border-2 text-uppercase' type='submit'>explore more</button></a></div>
       
-      echo "</div>";
+       </div>
 
-      echo "</div>";
-      echo "</div>";
-    }
+       </div>
+       </div>
+<?php }
   }
-
   ?>
 
 </body>

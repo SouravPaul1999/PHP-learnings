@@ -71,6 +71,8 @@ echo $bike::GENARATION . "<br>";  //we can print constant using scope resolution
 Bike::staticMethod();
 // echo "<br>". $bike ->c_mileage;
 // echo $bike -> registration;
+
+// var_dump(PDO::getAvailableDrivers()); 
 ?>
 
 </body>

@@ -82,7 +82,7 @@
     FROM employee_salary_table
     WHERE employee_code = '' ";
 
-    $fetch_data = $conn->prepare($q2);
+    $fetch_data = $conn->prepare($q1);
     $fetch_data->execute();
     
     

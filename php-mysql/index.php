@@ -29,7 +29,7 @@
 </div><br> 
  
 <div class="container">
-  <form action="indexd.php" method="POST">
+  <form action="index.php" method="POST">
     <div class="form-group">
       <label for="ecode">Employee_code:</label>
       <input type="text" class="form-control" name="ecode" placeholder="Enter Employee code like <su_poppy>" required="">

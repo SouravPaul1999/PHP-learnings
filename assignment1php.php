@@ -1,6 +1,6 @@
 <?php
 session_start();
-require('./composer-project/vendor/setasign/fpdf/fpdf.php');
+require('./vendor/setasign/fpdf/fpdf.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">

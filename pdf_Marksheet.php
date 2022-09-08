@@ -18,6 +18,24 @@ session_start();
         
       }
     );
+
+    // <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+  <script>
+    $(document).ready (function(){
+
+      $('#address').change(function()  
+      {  
+        var hasNumber = this.value.match(/^[a-zA-Z0-9|]+$/);
+        if ( hasNumber) {
+          return true;
+        } else {
+         alert("please write marks in valid syntax");   
+         return false; 
+        }
+      });
+    });
+
+  </script>
   </script>
   <title>Marksheet's PDF</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -97,7 +115,7 @@ session_start();
   <br>
   Contact Number: <input type="tel" class="form-control" pattern="[+]{1}[9]{1}[1]{1}[0-9]{10}" maxlength="13" name="phone" onkeydown="this.value = this.value.trim()" onkeyup="this.value = this.value.trim()" placeholder="Enter +91 before your number"  id="">
   Email ID: <input type="text" name="email" class="form-control" pattern="[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" onkeydown="this.value = this.value.trim()" onkeyup="this.value = this.value.trim()">
-  marks: <textarea name="Allmarks" id="" class="form-control" placeholder="follow this pattern (subject|marks)" cols="20" rows="10"></textarea>
+  marks: <textarea name="Allmarks" id="address" class="form-control" placeholder="follow this pattern (subject|marks)" cols="20" rows="10"></textarea>
   <br>
   choose your photo:
   <input type="file" class="form-control" accept="image/*" name="avatar">

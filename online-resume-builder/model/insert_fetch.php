@@ -26,10 +26,10 @@ class user
     if ($_POST['pw']==$_POST['cpw']) {
       # code...
       $hash=password_hash($_POST['pw'],PASSWORD_DEFAULT);
-      $uname = $this->conn->quote($_POST['username']);
+      $uname = $this->conn->quote($_POST['uname']);
       // $password = $this->conn->quote($_POST['pw']);
       $password = $this->conn->quote($hash);
-      $email = $this->conn->quote($_POST['mail']);
+      $email = $this->conn->quote($_POST['email']);
       // $cpassword = $this->conn->quote($_POST['cpw']);
       $cpassword = $this->conn->quote($hash);
       $query = "INSERT INTO user(username,email,password,cpassword) VALUES($uname,$email,$password,$cpassword)";
@@ -71,22 +71,25 @@ class user
           
                   session_start();
                   $_SESSION["username"] = $_POST["username"];
-                  // header("location:../view/loginsuccess.php");
-                  return "success";
+                  header("location:../view/loginsuccess.php");
+                  // return "success";
+                }
+                else{
+                  echo "bye";
                 }
             }
             // return "success";
           } else {
             $message = '<label>Wrong Data</label>';
+            echo $message;
           }
         }
       }
     } catch (PDOException $error) {
       $message = $error->getMessage();
+      echo $message;
     }
   }
 }
-
-$obj= new user();
 
 ?>

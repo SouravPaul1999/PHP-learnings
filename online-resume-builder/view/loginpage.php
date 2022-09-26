@@ -22,16 +22,19 @@
           //  }  
           //  
           ?>
-          <h3 align="">User Login</h3><br />
+          <h3 align="center">User Login</h3><br />
           <form action="../controller/loginc.php" method="POST">
                <label>Username</label>
-               <input type="text" name="username" class="form-control" required />
+               <input type="text" name="username" class="form-control" pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{4,}$" title="Minimum four characters, at least one letter, one number and one special character" required />
                <br />
                <label>Password</label>
-               <input type="password" name="password" class="form-control" required />
+               <input type="password" name="password" class="form-control" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d@$!%*#?&]{4,}$" title="Minimum Four characters, at least one uppercase letter, one lowercase letter, one number and one special character" required />
                <br />
                <input type="submit" name="login" class="btn btn-info" value="Login" />
           </form>
+          <div class="text-right">
+               Don't have an account! <br> <a href="./signup.php" class="btn btn-warning btn-outline-danger">Register</a>
+          </div>
      </div>
      <br />
 

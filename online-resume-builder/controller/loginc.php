@@ -1,9 +1,10 @@
 <?php
 session_start();
 require('../model/insert_fetch.php');
-// echo $_SESSION['username'];
-echo "hello";
-if (!isset($_SESSION['username'])) {
+// echo "hello";
+
+// if (!isset($_SESSION['username'])) {
+
   $obj=  new user;
   // require('../view/loginpage.php');
   $d= $obj->insertData_fetch($_POST);
@@ -12,9 +13,9 @@ if (!isset($_SESSION['username'])) {
   //   // header('location:../view/loginsuccess.php');
   //   require('../view/loginsuccess.php');
   // }
-}
-else{
+  // }
+// else{
 
-}
+// }
 
 ?>

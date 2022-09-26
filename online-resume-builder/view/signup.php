@@ -17,19 +17,19 @@
         <div class="card">
           <h2 class="card-title text-center">Register</h2>
           <div class="card-body py-md-4">
-            <form control="#" method="POST">
+            <form action="../controller/signupc.php" method="POST">
               <div class="form-group">
-                <input type="text" class="form-control" id="username" name="uname" placeholder="User Name">
+                <input type="text" class="form-control" id="username" name="uname" pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{4,}$" title="Minimum four characters, at least one letter, one number and one special character" placeholder="User Name" required>
               </div>
               <div class="form-group">
-                <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+                <input type="email" class="form-control" id="email" name="email" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"  placeholder="Email">
               </div>
 
               <div class="form-group">
-                <input type="password" class="form-control" id="password" name="pw" placeholder="Password">
+                <input type="password" class="form-control" id="password" name="pw" placeholder="Password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d@$!%*#?&]{4,}$" title="Minimum Four characters, at least one uppercase letter, one lowercase letter, one number and one special character" required>
               </div>
               <div class="form-group">
-                <input type="password" class="form-control" id="confirm-password" name="cpw" placeholder="confirm-password">
+                <input type="password" class="form-control" id="confirm-password" name="cpw" placeholder="confirm-password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d@$!%*#?&]{4,}$" title="Minimum Four characters, at least one uppercase letter, one lowercase letter, one number and one special character" required>
               </div>
               <div class="form-group">
                 <input type="submit" value="Submit" class="form-control fs-4 bg-dark text-warning" >

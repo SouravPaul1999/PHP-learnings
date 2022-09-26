@@ -2,5 +2,6 @@
  //logout.php  
  session_start();  
  session_destroy();  
- header("location:./controller/loginc.php");  
+//  echo "hi";
+ header("location:./loginpage.php");
  ?>  

@@ -4,12 +4,11 @@
  if(isset($_SESSION["username"]))  
  {  
       echo '<h3>Login Success, Welcome - '.$_SESSION["username"].'</h3>';
-?>  
-      <br /><br /><a href='<?php require('../view/logout.php') ?>'>Logout</a>
-<?php
+
+      echo "<a href='./logout.php'>Logout</a>";
  }  
  else  
  {  
-      header("location:../online-resume-builder/controller/loginc.php");  
+      header("location:../controller/loginc.php");  
  }  
  ?>  

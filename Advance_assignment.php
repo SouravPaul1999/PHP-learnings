@@ -35,57 +35,65 @@ require('vendor/autoload.php');
     // var_dump($photo);
 
     $image = 'https://ir-dev-d9.innoraft-sites.com' . $photo->data->attributes->uri->url;
-    // echo "<img src=$image width='' height='' alt='' srcset=''>";
+    // echo "<img src=$image width='' height='' alt='service image' srcset=''>";
     $stitle = ($data['data'][$i]['attributes']['field_secondary_title']['value']);
     // echo $stitle;
     $scontent = ($data['data'][$i]['attributes']['field_services']['value']);
     // echo $scontent;
 
     if ($i % 2 == 0) {
-      echo "<div class='row flex-row-reverse flex-row gy-5 justify-content-center'>";
+      ?>
+       <div class='container'>
+       <div class='row flex-row-reverse flex-row gy-5 justify-content-center'>
+      
+       <div class=' col-sm-12 col-md-6  col-xl-6'>
+      
+       <img class='image img-fluid' alt='service image' src=<?php echo $image ?>>
+      
+       </div>
+      
+       <div class=' col-sm-12 col-md-6  col-xl-6'>
+      
+       <div class='text-break'><?php echo $stitle ?></div>
+      
+      
+       <div class='text-break'> <?php echo $scontent ?></div>
+  
+       <div class='text-lest'><a href='#' class='text-dark text-decoration-none'><button class=' fw-bold btn btn-md btn-white btn-block border border-primary border-color border-2 text-uppercase'  type='submit'>explore more</button></a></div>
+      
+       </div>
+      
+       </div>
 
-      echo "<div class=' col-sm-12 col-md-6  col-xl-4'>";
-
-      echo "<img class='image img-fluid' src='$image'>";
-
-      echo "</div>";
-
-      echo "<div class=' col-sm-12 col-md-6  col-xl-4'>";
-
-      echo "<div class='text-break'>$stitle</div>";
-
-
-      echo "<div class='text-break'>$scontent</div>";
-
-      echo "<div class='text-lest'><a href='#' class='text-dark text-decoration-none'><button class=' fw-bold btn btn-md btn-white btn-block border border-primary border-color border-2 text-uppercase'  type='submit'>explore more</button></a></div>";
-
-      echo "</div>";
-
-      echo "</div>";
+       </div>
+      <?php
     } 
     else {
-      echo "<div class='row flex-row gy-5 justify-content-center'>";
+      ?>
+       <div class='container'>
 
-      echo "<div class=' col-sm-12 col-md-6 col-xl-4'>";
+       <div class='row flex-row gy-5 justify-content-center'>
 
-      echo "<img class='image img-fluid' src='$image'>";
+       <div class=' col-sm-12 col-md-6 col-xl-6'>
 
-      echo "</div>";
+       <img class='image img-fluid' alt='service image' src=<?php echo $image ?>>
 
-      echo "<div class=' col-sm-12 col-md-6 col-xl-4'>";
+       </div>
 
-      echo "<div class=' text-break'>$stitle</div>";
+       <div class=' col-sm-12 col-md-6 col-xl-6'>
 
-      echo "<div class='text-break'>$scontent</div>";
+       <div class=' text-break'><?php echo $stitle ?></div>
 
-      echo "<div class='text-left'><a href='#' class='text-dark text-decoration-none'><button class=' fw-bold btn btn-md btn-white btn-block border border-primary border-color border-2 text-uppercase' type='submit'>explore more</button></a></div>";
+       <div class='text-break'> <?php echo $scontent ?></div>
+
+       <div class='text-left'><a href='#' class='text-dark text-decoration-none'><button class=' fw-bold btn btn-md btn-white btn-block border border-primary border-color border-2 text-uppercase' type='submit'>explore more</button></a></div>
       
-      echo "</div>";
+       </div>
 
-      echo "</div>";
-    }
+       </div>
+       </div>
+<?php }
   }
-
   ?>
 
 </body>

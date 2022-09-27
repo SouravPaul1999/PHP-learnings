@@ -50,7 +50,7 @@
           Use professional field-tested resume templates that follow the exact <br> ‘resume rules’ employers look for. Easy to use and done within <br> minutes - try now for free! 
           </p>
           <p class="text-center my-2">
-          <a href="#" class="btn btn-primary btn-md fw-normal rounded-pill" >Build Your Resume</a>
+          <a href="./details.php" class="btn btn-primary btn-md fw-normal rounded-pill" >Build Your Resume</a>
           </p>
       </div>
     </section>

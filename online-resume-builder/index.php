@@ -4,7 +4,7 @@ if (!isset($_SESSION['username'])) {
   header('location:./view/loginpage.php');
 }
 else{
-  echo "hi";
+  header('location:./view/landingpage.php');
 }
 
 ?>

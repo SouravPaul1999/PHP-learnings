@@ -71,7 +71,7 @@ class user
           
                   session_start();
                   $_SESSION["username"] = $_POST["username"];
-                  header("location:../view/loginsuccess.php");
+                  header("location:../view/landingpage.php");
                   // return "success";
                 }
                 else{

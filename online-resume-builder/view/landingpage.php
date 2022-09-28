@@ -29,7 +29,7 @@
               <a class="nav-link toggle" href="#" >Contact Us</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link toggle" href="#" >Profile</a>
+              <a class="nav-link toggle" href="./profile.php" >Profile</a>
             </li>
           </ul>
           <div class="d-flex">

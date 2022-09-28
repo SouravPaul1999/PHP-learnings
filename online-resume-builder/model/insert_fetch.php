@@ -35,9 +35,8 @@ class user
       $query = "INSERT INTO user(username,email,password,cpassword) VALUES($uname,$email,$password,$cpassword)";
       $sql = $this->conn->exec($query);
       if ($sql != false) {
-        echo "you insert the data into employee_code_table on {$this->db} successfully.";
-        // header("Location:indexd.php?msg1=insert");
-        // header("Refresh: 4; URL = show_CodeTable.php");
+        echo "you have successfully registered. you will be redirect to login page shortly";
+        header("Refresh: 4; URL = ../view/loginpage.php");
       } 
     }
     else {

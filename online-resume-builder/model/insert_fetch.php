@@ -27,10 +27,8 @@ class user
       # code...
       $hash=password_hash($_POST['pw'],PASSWORD_DEFAULT);
       $uname = $this->conn->quote($_POST['uname']);
-      // $password = $this->conn->quote($_POST['pw']);
       $password = $this->conn->quote($hash);
       $email = $this->conn->quote($_POST['email']);
-      // $cpassword = $this->conn->quote($_POST['cpw']);
       $cpassword = $this->conn->quote($hash);
       $query = "INSERT INTO user(username,email,password,cpassword) VALUES($uname,$email,$password,$cpassword)";
       $sql = $this->conn->exec($query);
@@ -52,13 +50,13 @@ class user
           $message = '<label>All fields are required</label>';
           echo $message;
         } else {
-          // $query = "SELECT * FROM user WHERE username = :username AND password = :password";
+          
           $query = "SELECT * FROM user WHERE username = :username ";
           $statement = $this->conn->prepare($query);
           $statement->execute(
             array(
               'username'     =>     $_POST["username"]
-              // 'password'     =>     $_POST["password"]
+              
               )
             );
             $count = $statement->rowCount();
@@ -71,13 +69,12 @@ class user
                   session_start();
                   $_SESSION["username"] = $_POST["username"];
                   header("location:../view/landingpage.php");
-                  // return "success";
                 }
                 else{
                   echo "bye";
                 }
             }
-            // return "success";
+          
           } else {
             $message = '<label>Wrong Data</label>';
             echo $message;

@@ -12,11 +12,11 @@
 <p class='text-center'>
   <?php
   session_start();
-  // $files = scandir($_SESSION['user_folder']);
+  // $files = scandir($_SESSION["user_folder"]);
   $files = scandir("../user_resume_folder/{$_SESSION['username']}");
   foreach ($files as $file) {
-    $l= $_SESSION['user_folder'].'/'.$file ;
-    echo " <a href= $l>".basename($file)."</a>  Last access: ".date("F d Y H:i:s.", filemtime($l))."<br>";
+    $l= "../user_resume_folder/{$_SESSION['username']}"."/".$file ;
+    echo " <a href= $l>".basename($file)."</a>  Last access: ".date("F d Y H:i:s.", fileatime($l))."<br>";
   }
   ?>
 </p>

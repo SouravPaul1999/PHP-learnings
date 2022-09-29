@@ -9,7 +9,6 @@ function upload_pic($k)
     $file_name = ($_FILES[$k]["name"]);
     $imagep = $image = "";
     $check= getimagesize($_FILES[$k]["tmp_name"]);
-    // var_dump ($_FILES[$k]);
     if (move_uploaded_file($_FILES[$k]['tmp_name'], $file_location) && $check!=False ) {
       $image = "<img src='photo/$file_name' height='150px' width='300px'>";
       $imagep = "photo/" . $file_name;
@@ -24,13 +23,17 @@ function upload_pic($k)
   }
 }
 
-if (isset($_POST['submit'])) {
 
-  session_start();
+session_start();
 
   $path="../user_resume_folder/{$_SESSION['username']}";
 
-  $_SESSION['user_folder']=$path;
+  // $_SESSION["user_folder"]=$path;
+
+if (isset($_POST['submit'])) {
+  
+
+  
 
   if (!file_exists($path)) {
 

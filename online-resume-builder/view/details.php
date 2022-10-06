@@ -33,7 +33,7 @@
 
 <body>
   <div class="testbox">
-    <form action="./create_pdf.php" method="POST" enctype="multipart/form-data">
+    <form action="../controller/create_pdf.php" method="POST" enctype="multipart/form-data">
       <div class="banner">
         <h1>Fill Your Resume</h1>
       </div>

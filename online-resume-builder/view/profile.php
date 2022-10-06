@@ -34,25 +34,22 @@
 
         </ul>
         <div class="d-flex">
-          <a href="./logout.php" class="btn btn-warning btn-outline-danger btn-md">Logout</a>
+          <a href="../controller/logout.php" class="btn btn-warning btn-outline-danger btn-md">Logout</a>
         </div>
       </div>
     </div>
   </nav>
   <section class="des ">
     <div class="container">
+
       <h1 class="text-center  text-danger fs-6 mt-5">
         Welcome to your Profile: <?php session_start();  echo($_SESSION['username']) ?>
       </h1>
-      <!-- <h2 class="text-center my-3 fw-light">
-        Only 2% of resumes make it past the first round. <br> Be in the top 2%
-      </h2>
-      <p class="my-3 text-center fs-5 fw-normal">
-        Use professional field-tested resume templates that follow the exact <br> ‘resume rules’ employers look for. Easy to use and done within <br> minutes - try now for free!
-      </p> -->
+  
       <p class="text-center mt-5">
         <a href="./history.php" class="btn btn-primary btn-md fw-normal rounded-pill">Go To Your Downloaded Resume History</a>
       </p>
+
     </div>
   </section>
 </body>

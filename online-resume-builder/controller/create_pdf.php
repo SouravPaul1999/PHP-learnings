@@ -4,14 +4,14 @@ require('../../vendor/setasign/fpdf/fpdf.php');
 function upload_pic($k)
 {
   if (isset($_FILES[$k]) && !empty($_FILES[$k]['name'])) {
-    $upload_folder = "photo/";
+    $upload_folder = "../view/photo/";
     $file_location = $upload_folder . basename($_FILES[$k]["name"]);
     $file_name = ($_FILES[$k]["name"]);
     $imagep = $image = "";
     $check= getimagesize($_FILES[$k]["tmp_name"]);
     if (move_uploaded_file($_FILES[$k]['tmp_name'], $file_location) && $check!=False ) {
-      $image = "<img src='photo/$file_name' height='150px' width='300px'>";
-      $imagep = "photo/" . $file_name;
+      $image = "<img src='../view/photo/$file_name' height='150px' width='300px'>";
+      $imagep = "../view/photo/" . $file_name;
       return $imagep;
     } 
     else {

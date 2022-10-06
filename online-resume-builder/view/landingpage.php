@@ -33,7 +33,7 @@
             </li>
           </ul>
           <div class="d-flex">
-          <a href="./logout.php" class="btn btn-warning btn-outline-danger btn-md" >Logout</a>
+          <a href="../controller/logout.php" class="btn btn-warning btn-outline-danger btn-md" >Logout</a>
           </div>
         </div>
       </div>

@@ -21,7 +21,7 @@
   ?>
 </p>
   <p class="text-end me-5">
-        <a href="./logout.php" class="btn btn-primary btn-md fw-normal "> Logout </a>
+        <a href="../controller/logout.php" class="btn btn-primary btn-md fw-normal "> Logout </a>
       </p>
 </body>
 </html>

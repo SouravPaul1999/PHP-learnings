@@ -15,13 +15,7 @@
 
      <br />
      <div class="container" style="width:500px;">
-          <?php
-          //  if(isset($message))  
-          //  {  
-          //       echo '<label class="text-danger">'.$message.'</label>';  
-          //  }  
-          //  
-          ?>
+ 
           <h3 align="center">User Login</h3><br />
           <form action="../controller/loginc.php" method="POST">
                <label>Username</label>

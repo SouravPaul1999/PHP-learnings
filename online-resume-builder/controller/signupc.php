@@ -1,6 +1,7 @@
 <?php
+require('./login_signup.php');
 
-require('../model/insert_fetch.php');
-$obj = new user;
-$obj->insertData_user($_POST);
+$user_signup = new login_signup;
+
+$user_signup->signup($_POST)
 ?>

@@ -1,10 +1,9 @@
 <?php
-session_start();
-require('../model/insert_fetch.php');
 
-  $obj=  new user;
-  $d= $obj->insertData_fetch($_POST);
-  echo $d;
+require('./login_signup.php');
 
+$user_login = new login_signup;
+
+$user_login->login($_POST)
 
 ?>

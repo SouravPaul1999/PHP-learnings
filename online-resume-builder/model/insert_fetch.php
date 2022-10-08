@@ -33,12 +33,13 @@ class user
       $query = "INSERT INTO user(username,email,password,cpassword) VALUES($uname,$email,$password,$cpassword)";
       $sql = $this->conn->exec($query);
       if ($sql != false) {
-        echo "you have successfully registered. you will be redirect to login page shortly";
+        echo "<h1><center>you have successfully registered. you will be redirect to login page shortly</center><h1>";
         header("Refresh: 4; URL = ../view/loginpage.php");
       } 
     }
     else {
-      echo "Registration failed try again!";
+      echo "<h2><center>Registration failed try again!<center><h2>";
+      header("Refresh: 3; URL = ../view/signup.php");
     }
   }
 
@@ -71,19 +72,22 @@ class user
                   header("location:../view/landingpage.php");
                 }
                 else{
-                  echo "bye";
+                  $error_message= "<center><h2> wrong Password </h2></center>" ;
+                  echo $error_message;
+                  header("Refresh: 3; URL = ../view/loginpage.php");
                 }
             }
           
           } else {
-            $message = '<label>Wrong Data</label>';
+            $message = '<label><h2><center>Wrong Username</center></h2></label>';
             echo $message;
+            header("Refresh: 3; URL = ../view/loginpage.php");
           }
         }
       }
     } catch (PDOException $error) {
-      $message = $error->getMessage();
-      echo $message;
+      $exception_message = $error->getMessage();
+      echo $exception_message;
     }
   }
 }
